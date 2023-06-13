@@ -1,0 +1,38 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.key {
+    font-family: inherit;
+    border: none;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    background-color: white;
+    box-shadow: 0 0 35px -11px #00000020;
+    cursor: pointer;
+    transition: all 500ms ease;
+}
+
+.key:hover:not(:disabled),
+.key:focus:not(:disabled),
+.key.active {
+    box-shadow: none;
+    background-color: #246EB9;
+    color: white;
+}
+
+.key:disabled {
+    opacity: 0.45;
+    box-shadow: none;
+}

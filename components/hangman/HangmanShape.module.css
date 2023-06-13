@@ -1,0 +1,95 @@
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottom {
+    width: 70px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: #121212;
+}
+
+.rod {
+    width: 4px;
+    height: 120px;
+    background-color: #121212;
+    border-radius: 5px 5px 0 0;
+}
+
+.top {
+    width: 120px;
+    height: 4px;
+    background-color: #121212;
+    border-radius: 0 5px 5px 0;
+    transform: translateX(50%) translateY(4px);
+}
+
+.gallows {
+    position: absolute;
+    top: 4px;
+    right: -60px;
+    transform: translateX(50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.top-bottom {
+    width: 4px;
+    height: 30px;
+    background-color: #121212;
+    border-radius: 0 0 5px 5px;
+}
+
+.head {
+    width: 30px;
+    height: 30px;
+    margin-top: -2px;
+    border-radius: 50%;
+    border: 3px solid #246EB9;
+}
+
+.body {
+    width: 3px;
+    height: 60px;
+    background-color: #246EB9;
+}
+
+.arm {
+    width: 45px;
+    height: 3px;
+    background-color: #246EB9;
+}
+
+.right {
+    position: absolute;
+    top: 60%;
+    left: -11px;
+    transform: translateX(50%) translateY(-50%) rotate(-40deg);
+}
+
+.left {
+    position: absolute;
+    top: 60%;
+    right: -10px;
+    transform: translateX(-50%) translateY(-50%) rotate(40deg);
+}
+
+.foot {
+    position: absolute;
+    bottom: -30px;
+    width: 3px;
+    height: 45px;
+    background-color: #246EB9;
+}
+
+.right-foot {
+    transform: rotate(-40deg) translateX(6px) translateY(16px);
+}
+
+.left-foot {
+    transform: rotate(40deg) translateX(-6px) translateY(16px);
+}
