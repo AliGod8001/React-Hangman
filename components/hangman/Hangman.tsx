@@ -24,6 +24,8 @@ const Hangman = () => {
     const isWinner = wordToGuess.split("").every(letter => guessedWord.includes(letter))
     const isLoser = wrongWordGuessed.length >= 6
 
+    console.log(wordToGuess)
+
     const addGuessedLetter = useCallback(
         (letter: string) => {
             if (guessedWord.includes(letter) || isLoser || isWinner) return
@@ -70,7 +72,8 @@ const Hangman = () => {
     }, [])
 
     const helpClickHandler = () => {
-        const helpLetter = wordToGuess[Math.floor(Math.random() * wordToGuess.length)]
+        const remainLetters = wordToGuess.split("").filter(letter => !guessedWord.includes(letter))
+        const helpLetter = remainLetters[Math.floor(Math.random() * remainLetters.length)]
         setGuessedWord(prevState => [...prevState, helpLetter])
     }
 
