@@ -1,5 +1,4 @@
 /* other imports */
-import { HTMLAttributes } from 'react'
 import styles from './MainButton.module.css'
 
 const convertType = (type: string) => {
