@@ -38,6 +38,8 @@ body.light {
 
   --loser-color: #ff001c;
   --winner-color: #00e716;
+
+  --scorllbar-thumb-color: #b6b6b6;
 }
   
 body.dark {
@@ -72,6 +74,8 @@ body.dark {
 
   --loser-color: #ff001c;
   --winner-color: #00e716;
+  
+  --scorllbar-thumb-color: #444444;
 }
 
 body {
@@ -80,4 +84,17 @@ body {
     font-family: 'Lalezar', sans-serif;
     font-weight: normal;
     background-color: var(--background-color);
+}
+
+body::-webkit-scrollbar {
+  width: 6.5px;
+  height: 2.5px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--scorllbar-thumb-color);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--background-color);
 }
