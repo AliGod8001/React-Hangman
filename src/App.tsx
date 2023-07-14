@@ -1,6 +1,6 @@
 import "./App.css"
 
-import Hangman from "../components/hangman/Hangman.tsx";
+import Hangman from "./components/Hangman";
 
 function App() {
   return <Hangman />

@@ -7,11 +7,11 @@ import HangmanText from "./HangmanText.tsx";
 import HangmanKeyboard from "./HangmanKeyboard.tsx";
 
 /* other import */
-import words from '../../store/WORDS.json'
+import _words from '../data/WORDS.json'
 import styles from './Hangman.module.css'
 
 const getWord = () => {
-    return words[Math.floor(Math.random() * words.length)]
+    return _words[Math.floor(Math.random() * _words.length)]
 }
 
 const Hangman = () => {
