@@ -11,8 +11,10 @@ const Wrapper = ({
     children: string | JSX.Element | JSX.Element[]
 }) => {
     return <>
-        <SocialsList />
-        <div className={styles.wrapper}>{children}</div>
+        <div className={styles.wrapper}>
+            <SocialsList />
+            {children}
+        </div>
     </>
 }
 

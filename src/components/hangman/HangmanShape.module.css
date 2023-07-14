@@ -12,6 +12,7 @@
     align-items: center;
     margin: 0 auto;
     width: 120px;
+    transform: translateX(-40px);
 }
 
 .bottom {
