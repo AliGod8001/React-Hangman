@@ -1,5 +1,5 @@
-import _keys from '../data/KEYS.json'
 
+import _keys from '../../data/KEYS.json'
 import styles from './HangmanKeyboard.module.css'
 
 type HangmanKeyboardProp = {

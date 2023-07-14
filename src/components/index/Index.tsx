@@ -2,19 +2,20 @@
 import { useState, useEffect, useCallback } from "react";
 
 /* component import */
-import HangmanShape from "./HangmanShape.tsx";
-import HangmanText from "./HangmanText.tsx";
-import HangmanKeyboard from "./HangmanKeyboard.tsx";
+import Wrapper from "../layout/Wrapper.tsx";
+import HangmanShape from "../hangman/HangmanShape.tsx";
+import HangmanText from "../hangman/HangmanText.tsx";
+import HangmanKeyboard from "../hangman/HangmanKeyboard.tsx";
 
 /* other import */
-import _words from '../data/WORDS.json'
-import styles from './Hangman.module.css'
+import _words from '../../data/WORDS.json'
+import styles from './Index.module.css'
 
 const getWord = () => {
     return _words[Math.floor(Math.random() * _words.length)]
 }
 
-const Hangman = () => {
+const Index = () => {
     const [wordToGuess, setWordToGuess] = useState<string>(() => {
         return getWord()
     })
@@ -23,8 +24,6 @@ const Hangman = () => {
     const wrongWordGuessed = guessedWord.filter(letter => !wordToGuess.includes(letter))
     const isWinner = wordToGuess.split("").every(letter => guessedWord.includes(letter))
     const isLoser = wrongWordGuessed.length >= 6
-
-    console.log(wordToGuess)
 
     const addGuessedLetter = useCallback(
         (letter: string) => {
@@ -83,12 +82,14 @@ const Hangman = () => {
         setWordToGuess(getWord())
     }
 
-    return <section className={styles.section}>
-        {isWinner || isLoser ? <h3 className={`${isWinner ? styles.winner : styles.loser}`}>{`${isWinner ? "تبریک شما برنده شدید!" : "متاسفانه شما باختید!"}`} برای شروع دوباره اینتر را فشار دهید</h3> : ""}
+    return <Wrapper>
+        <>
+            {isWinner || isLoser ? <h3 className={`${isWinner ? styles.winner : styles.loser}`}>{`${isWinner ? "تبریک شما برنده شدید!" : "متاسفانه شما باختید!"}`} برای شروع دوباره اینتر را فشار دهید</h3> : ""}
+        </>
         <HangmanShape wrongWordLength={wrongWordGuessed.length}/>
         <HangmanText wordToGuess={wordToGuess} guessedWord={guessedWord} winner={isWinner} loser={isLoser} onHelpClick={helpClickHandler} onResetClick={resetClickHandler}/>
         <HangmanKeyboard wordToGuess={wordToGuess} guessedWord={guessedWord} onKeyClick={addGuessedLetter} />
-    </section>
+    </Wrapper>
 }
 
-export default Hangman;
+export default Index;

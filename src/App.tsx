@@ -1,9 +1,7 @@
-import "./App.css"
-
-import Hangman from "./components/Hangman";
+import Index from "./components/index/Index"
 
 function App() {
-  return <Hangman />
+  return <Index />
 }
 
 export default App

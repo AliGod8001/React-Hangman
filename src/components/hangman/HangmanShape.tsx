@@ -14,15 +14,17 @@ type HangmanShapeProps = {
     wrongWordLength: number
 }
 const HangmanShape = (props : HangmanShapeProps) => {
-    return <div className={styles.wrapper}>
-        <div className={styles.top}></div>
-        <div className={styles.rod}></div>
-        <div className={styles.bottom}></div>
-        <div className={styles.gallows}>
-            <div className={styles["top-bottom"]}></div>
-            {BODY_PART.slice(0, props.wrongWordLength)}
+    return <section className={styles['main-wrapper']}>
+        <div className={styles.wrapper}>
+            <div className={styles.top}></div>
+            <div className={styles.rod}></div>
+            <div className={styles.bottom}></div>
+            <div className={styles.gallows}>
+                <div className={styles["top-bottom"]}></div>
+                {BODY_PART.slice(0, props.wrongWordLength)}
+            </div>
         </div>
-    </div>
+    </section>
 }
 
 export default HangmanShape;

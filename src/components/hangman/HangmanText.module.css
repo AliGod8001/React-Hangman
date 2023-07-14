@@ -1,0 +1,24 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px 10px;
+    margin-bottom: 20px;
+}
+
+.key {
+    padding: 20px 20px 25px 20px;
+    border-bottom: 4px solid var(--wood-color);
+    color: var(--title-color);
+    border-radius: 4px;
+    font-size: 25px;
+}
+
+.winner {
+    color: #00e716 !important;
+}
+
+.button {
+    margin-top: auto;
+}

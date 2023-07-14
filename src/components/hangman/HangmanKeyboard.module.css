@@ -16,20 +16,23 @@
     width: 70px;
     height: 70px;
     padding: 20px;
-    border-radius: 5px;
+    border: 1px solid var(--key-border-color);
+    border-radius: var(--key-radius);
     font-size: 20px;
-    background-color: white;
-    box-shadow: 0 0 35px -11px #00000020;
+    background-color: var(--key-background);
+    color: var(--key-color);
     cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.08) 1.95px 1.95px 2.6px;
     transition: all 500ms ease;
 }
 
 .key:hover:not(:disabled),
 .key:focus:not(:disabled),
 .key.active {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border-color: var(--primary-color);
     box-shadow: none;
-    background-color: #246EB9;
-    color: white;
 }
 
 .key:disabled {

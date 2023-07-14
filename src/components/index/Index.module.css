@@ -1,0 +1,9 @@
+.winner {
+    color: var(--winner-color);
+    margin: 0;
+}
+
+.loser {
+    color: var(--loser-color);
+    margin: 0;
+}
